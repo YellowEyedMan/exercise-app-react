@@ -1,9 +1,11 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
   pointer-events: none;
 }
 
@@ -14,8 +16,9 @@
 }
 
 .App-header {
+  border: 0.5rem solid rgb(30, 255, 0);
   background-color: #282c34;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,7 +28,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #cdcdcd;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +38,297 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.App-body {
+  border: 0.5rem solid rgb(255, 0, 225);
+  background-color: #282c34;
+}
+.nav-buttons {
+  border: 0.5rem solid rgb(0, 34, 255);
+  background-color: #282c34;
+  display: flex;
+  justify-content: space-around;
+  flex-shrink: inherit;
+}
+
+.nav-btn {
+  height: 6rem;
+  width: 30rem;
+}
+.build-page {
+  border: solid 0.5rem red;
+  display: none;
+  flex-direction: column;
+  min-height: 1rem;
+  width: 100%;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* FILTER */
+
+.filter {
+  display: flex;
+  position: sticky;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  min-height: 4rem;
+  gap: 2rem;
+  margin: 0rem 2rem;
+  padding: 2rem;
+  list-style-type: none;
+  /* background-image: linear-gradient(
+    to top right,
+    rgb(245, 24, 4),
+    black,
+    rgb(255, 98, 0),
+    black
+  ); */
+  border: solid 0.5rem rgb(0, 0, 0);
+}
+.filter-element {
+  display: inline-block;
+}
+
+input[type="checkbox"][id^="checkbox"] {
+  display: none;
+}
+label {
+  padding: 0.01rem;
+  display: flex;
+  position: relative;
+
+  cursor: pointer;
+}
+label:before {
+  background-color: orangered;
+  color: rgb(255, 217, 0);
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  border: 0.21rem solid rgb(0, 0, 0);
+
+  position: absolute;
+  top: -1.14rem;
+  left: -1rem;
+  width: 3.8rem;
+  height: 3.8rem;
+  text-align: center;
+  line-height: 4rem;
+  font-size: 3.8rem;
+  transition-duration: 0.04s;
+  transform: scale(0);
+}
+
+label img {
+  height: 14rem;
+  width: 14rem;
+  transition-duration: 0.02s;
+  transform-origin: 50% 50%;
+  position: relative;
+}
+
+:checked + label:before {
+  content: "✓";
+
+  /* background-image: linear-gradient(
+    to top left,
+    black,
+    rgb(245, 100, 27),
+    black
+  ); */
+  transform: scale(1);
+}
+
+:checked + label img {
+  transform: scale(0.9);
+  box-shadow: 0 0 2rem black;
+  z-index: -1;
+}
+
+.reset-btn-div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.reset-filter-btn {
+  display: flex;
+  justify-content: center;
+  padding: 0rem 8rem;
+  height: 4rem;
+
+  font-size: 3.4rem;
+
+  border: 0.1rem solid rgb(0, 0, 0);
+  /* background-image: linear-gradient(
+    to bottom right,
+    black,
+    rgb(245, 100, 27),
+    rgb(255, 217, 0),
+    rgb(245, 100, 27),
+    black
+  ); */
+}
+
+/* WORKOUT SELECTION */
+
+.workouts {
+  border: solid 0.5rem rgb(255, 0, 0);
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content: center;
+
+  min-height: 0rem;
+  margin: 0rem 2rem;
+  /* background-image: linear-gradient(
+    to bottom right,
+    rgb(245, 100, 27),
+    black,
+    rgb(51, 67, 246),
+    rgb(0, 242, 255)
+  ); */
+}
+
+.selection-clear-div {
+  border: 0.1rem solid rgb(166, 255, 0);
+  display: flex;
+  justify-content: center;
+  min-height: 4rem;
+  width: 55%;
+  font-size: 3.6rem;
+  margin: 1rem 2rem;
+
+  /* background-image: linear-gradient(
+    to bottom left,
+    black,
+    rgb(245, 100, 27),
+    rgb(255, 217, 0),
+    rgb(245, 100, 27),
+    black
+  ); */
+}
+.workout-card {
+  display: none;
+
+  min-height: 4rem;
+  width: 44rem;
+  margin: 1.5rem;
+  /* background-image: linear-gradient(
+    to top left,
+    black,
+    rgb(255, 255, 255),
+    black
+  ); */
+  transition-duration: 0.02s;
+  transform-origin: 50% 50%;
+  position: relative;
+}
+
+.workouts-text {
+  min-width: 40.6rem;
+  padding-top: 0.6rem;
+  padding-left: 1.4rem;
+  font-size: 4rem;
+  position: absolute;
+  text-decoration: underline;
+  display: flex;
+  justify-content: center;
+}
+.abs-workouts {
+  display: flex;
+}
+.chest-workouts {
+  display: flex;
+}
+.biceps-workouts {
+  display: flex;
+}
+.shoulder-workouts {
+  display: flex;
+}
+.triceps-workouts {
+  display: flex;
+}
+.quads-workouts {
+  display: flex;
+}
+.hamstrings-workouts {
+  display: flex;
+}
+.calves-workouts {
+  display: flex;
+}
+.workouts-label {
+  border: 0.5rem solid rgb(0, 255, 208);
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  height: 6rem;
+  cursor: pointer;
+}
+.workouts-label:before {
+  background-color: rgb(245, 100, 27);
+  color: rgb(255, 217, 0);
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  border: 0.21rem solid black;
+
+  position: relative;
+  top: -1.8rem;
+  left: 41.48rem;
+  width: 3.8rem;
+  height: 3.8rem;
+  text-align: center;
+  line-height: 4rem;
+  font-size: 3.8rem;
+  transition-duration: 0.04s;
+  transform: scale(0);
+}
+
+:checked + .workouts-label {
+  /* background-image: linear-gradient(
+    to bottom left,
+
+    rgb(255, 217, 0),
+    black,
+    rgb(255, 217, 0),
+    black
+  ); */
+  color: rgb(245, 100, 27);
+  height: 6rem;
+}
+
+:checked + .workout-card:before {
+  content: "✓";
+
+  background-color: black;
+  transform: scale(1);
+}
+
+:checked + .workout-card {
+  transform: scale(0.9);
+  box-shadow: 0 0 2rem rgb(234, 82, 0);
+  z-index: -1;
+}
+
+/* CART */
+
+.cart-div {
+  border: 0.5rem solid pink;
+  display: block;
+
+  height: 24rem;
+  width: 100%;
+}
+
+/* SAVED PAGE */
+
+.saved-page {
+  border: solid 0.5rem orange;
+  display: none;
+  min-height: 4rem;
 }
