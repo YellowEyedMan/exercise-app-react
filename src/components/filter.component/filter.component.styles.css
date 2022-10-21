@@ -1,0 +1,44 @@
+#filter-div {
+  display: flex;
+  flex-direction: column;
+
+  list-style-type: none;
+  /* background-image: linear-gradient(
+      to top right,
+      rgb(245, 24, 4),
+      black,
+      rgb(255, 98, 0),
+      black
+    ); */
+  border: solid 0.5rem rgb(0, 0, 0);
+}
+
+.panels-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  min-height: 4rem;
+  gap: 2rem;
+  margin: 0rem 2rem;
+  padding: 2rem;
+}
+.selection-div {
+  border: solid 0.5rem rgb(0, 0, 0);
+  min-height: 4rem;
+}
+
+.reset-btn-div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.reset-filter-btn {
+  display: flex;
+  justify-content: center;
+  padding: 0rem 8rem;
+  height: 4rem;
+
+  font-size: 3.4rem;
+
+  border: 0.1rem solid rgb(0, 0, 0);
+}

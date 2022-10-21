@@ -1,0 +1,35 @@
+.selection {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border: solid 0.5rem rgb(255, 0, 0);
+  display: flex;
+  flex-flow: wrap;
+  min-height: 0rem;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(245, 100, 27),
+    black,
+    rgb(51, 67, 246),
+    rgb(0, 242, 255)
+  );
+}
+
+.selection-clear-div {
+  border: 0.1rem solid rgb(162, 230, 36);
+  display: flex;
+  justify-content: center;
+  min-height: 4rem;
+  width: 55%;
+  font-size: 3.6rem;
+  margin: 1rem 2rem;
+
+  /* background-image: linear-gradient(
+      to bottom left,
+      black,
+      rgb(245, 100, 27),
+      rgb(255, 217, 0),
+      rgb(245, 100, 27),
+      black
+    ); */
+}

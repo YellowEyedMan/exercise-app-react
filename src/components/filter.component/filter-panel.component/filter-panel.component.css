@@ -1,0 +1,58 @@
+.filter-element {
+  display: inline-block;
+}
+input[type="checkbox"][id^="checkbox"] {
+  display: none;
+}
+label {
+  padding: 0.01rem;
+  display: flex;
+  position: relative;
+
+  cursor: pointer;
+}
+label:before {
+  background-color: rgb(0, 0, 0);
+  color: rgb(0, 229, 255);
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  border: 0.21rem solid rgb(0, 0, 0);
+
+  position: absolute;
+  top: -1.14rem;
+  left: -1rem;
+  width: 3.8rem;
+  height: 3.8rem;
+  text-align: center;
+  line-height: 3.4rem;
+  font-size: 3.4rem;
+  transition-duration: 0.04s;
+  transform: scale(0);
+}
+
+label img {
+  height: 14rem;
+  width: 14rem;
+  transition-duration: 0.02s;
+  transform-origin: 50% 50%;
+  position: relative;
+}
+
+:checked + label:before {
+  content: "✓";
+
+  background-image: linear-gradient(
+    to top left,
+    black,
+    rgb(27, 41, 245),
+    black
+  );
+  transform: scale(1);
+}
+
+:checked + label img {
+  transform: scale(0.9);
+  box-shadow: 0 0 2rem black;
+  z-index: -1;
+}
