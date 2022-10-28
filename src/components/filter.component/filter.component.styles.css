@@ -1,5 +1,4 @@
 #filter-div {
-  display: flex;
   flex-direction: column;
 
   list-style-type: none;
@@ -22,7 +21,7 @@
   margin: 0rem 2rem;
   padding: 2rem;
 }
-.selection-div {
+#selection-div {
   border: solid 0.5rem rgb(0, 0, 0);
   min-height: 4rem;
 }

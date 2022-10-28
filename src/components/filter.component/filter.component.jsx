@@ -1,10 +1,12 @@
 ("use strict");
 
 import { Component } from "react";
+import { Dropdown } from "react-bootstrap";
 import FilterPanel from "./filter-panel.component/filter-panel.component";
 import "./filter.component.styles.css";
-import Selection from "./selection.component/selection.component";
+
 import WorkoutCard from "./workout-card.component/workout-card.component";
+import { CardGroup } from "react-bootstrap";
 
 class Filter extends Component {
   constructor() {
@@ -37,20 +39,22 @@ class Filter extends Component {
 
     const card = {};
     exercises.forEach((value, i) => (card[musclegroups[i]] = value));
-    console.log(group, card[`${group}`]);
+    // console.log(group, card[`${group}`]);
 
     return (
-      <div className={`${group}-set`}>
-        <WorkoutCard
-          musclegroup={group}
-          exercise={card[`${group}`][0]}
-          id="W1"
-        ></WorkoutCard>
-        <WorkoutCard
-          musclegroup={group}
-          exercise={card[`${group}`][1]}
-          id="W2"
-        ></WorkoutCard>
+      <div id="selection-div">
+        <div className={`${group}-set`}>
+          <WorkoutCard
+            musclegroup={group}
+            exercise={card[`${group}`][0]}
+            id="W1"
+          ></WorkoutCard>
+          <WorkoutCard
+            musclegroup={group}
+            exercise={card[`${group}`][1]}
+            id="W2"
+          ></WorkoutCard>
+        </div>
       </div>
     );
   }
@@ -101,9 +105,7 @@ class Filter extends Component {
           ></FilterPanel>
         </div>
 
-        <div className="selection-div">
-          <Selection></Selection>
-        </div>
+        <div id="selection-div"></div>
       </div>
     );
   }

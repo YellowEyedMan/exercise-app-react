@@ -45,6 +45,20 @@
   background-color: #282c34;
 }
 
+#nav {
+  border: 0.5rem solid red;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  background-color: #282c34;
+}
+
+.btn.btn-primary {
+  height: 6rem;
+  width: 24rem;
+  font-size: 3rem;
+}
+
 /* FILTER */
 
 /* #filter-div {

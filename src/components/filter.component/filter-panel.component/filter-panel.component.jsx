@@ -1,7 +1,6 @@
 ("use strict");
 import { Component } from "react";
 import "./filter-panel.component.css";
-import WorkoutCard from "../workout-card.component/workout-card.component";
 
 class FilterPanel extends Component {
   constructor(props) {
@@ -19,7 +18,10 @@ class FilterPanel extends Component {
         <div className="filter-element">
           <input type="checkbox" className="filter-box" id={`${id}`} />
           <label htmlFor={`${id}`}>
-            <img src={`Images/svg files/${muscleGroup}-VECTOR.svg`} />
+            <img
+              src={`/Users/devonfennell/exercise-app-react/src/Images/svg files/${muscleGroup}-VECTOR.svg`}
+              alt={`${muscleGroup}`}
+            />
           </label>
         </div>
       </div>

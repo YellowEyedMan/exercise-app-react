@@ -1,27 +1,24 @@
 ("use strict");
-import logo from "./logo.svg";
+import logo from "/Users/devonfennell/exercise-app-react/src/Images/png images/anvil-fixed.png";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Component } from "react";
-import NavBar from "./components/nav-bar.component/nav-bar.component";
 import BuildPage from "./components/build-page.component/build-page.component";
+import BuildButton from "./components/build-button.component/build-button.component";
+import SavedButton from "./components/saved-button.component";
+import SavedPage from "./components/saved-page.component/saved-page.component";
 
 class App extends Component {
   constructor() {
     super();
 
     this.state = {
-      cart: [],
-      saved: [],
+      buildPage: { display: "flex" },
+      savedPage: { display: "none" },
     };
   }
 
-  // addToCart() {
-  //   console.log("clicked");
-  //   const cartWorkout = document.createElement("div");
-  //   cartWorkout.classList.add("cart");
-  //   document.getElementById("cart-div").appendChild(cartWorkout);
-  // }
+  pageChange() {}
 
   render() {
     return (
@@ -29,15 +26,27 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </header>
-        <NavBar></NavBar>
 
-        <BuildPage></BuildPage>
+        <div id="nav">
+          <BuildButton></BuildButton>
+          <SavedButton></SavedButton>
+        </div>
+        <div className="body">
+          <BuildPage></BuildPage>
+          <SavedPage></SavedPage>
+        </div>
 
         <footer></footer>
       </div>
-      // </div>
     );
   }
 }
 
 export default App;
+
+export function log() {
+  console.log(`checked`);
+}
+export function toggleHidden() {
+  this.setState({ isHidden: !this.state.isHidden });
+}
