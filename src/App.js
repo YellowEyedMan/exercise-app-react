@@ -1,52 +1,31 @@
-("use strict");
 import logo from "/Users/devonfennell/exercise-app-react/src/Images/png images/anvil-fixed.png";
-import "./App.css";
+import "./App.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Component } from "react";
-import BuildPage from "./components/build-page.component/build-page.component";
-import BuildButton from "./components/build-button.component/build-button.component";
-import SavedButton from "./components/saved-button.component";
-import SavedPage from "./components/saved-page.component/saved-page.component";
+import BuildPage from "./routes/build-page/build-page.component";
 
-class App extends Component {
-  constructor() {
-    super();
+import SavedPage from "./routes/saved-page/saved-page.component";
 
-    this.state = {
-      buildPage: { display: "flex" },
-      savedPage: { display: "none" },
-    };
-  }
+import NavBar from "./components/nav-bar.component/nav-bar.component";
+import { Routes, Route } from "react-router-dom";
 
-  pageChange() {}
+const App = () => {
+  return (
+    <div className="App">
+      <header className="App-header">
+        The
+        <img src={logo} className="App-logo" alt="logo" />
+        Forge
+      </header>
+      <Routes>
+        <Route path="/" element={<NavBar />}>
+          <Route index element={<BuildPage />}></Route>
+          <Route path="/saved" element={<SavedPage />}></Route>
+        </Route>
+      </Routes>
 
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-        </header>
-
-        <div id="nav">
-          <BuildButton></BuildButton>
-          <SavedButton></SavedButton>
-        </div>
-        <div className="body">
-          <BuildPage></BuildPage>
-          <SavedPage></SavedPage>
-        </div>
-
-        <footer></footer>
-      </div>
-    );
-  }
-}
+      <footer></footer>
+    </div>
+  );
+};
 
 export default App;
-
-export function log() {
-  console.log(`checked`);
-}
-export function toggleHidden() {
-  this.setState({ isHidden: !this.state.isHidden });
-}

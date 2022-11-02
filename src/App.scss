@@ -20,10 +20,11 @@
   background-color: #282c34;
   /* min-height: 100vh; */
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  gap: 2rem;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 4rem;
   color: white;
 }
 
@@ -43,20 +44,6 @@
 .App-body {
   border: 0.5rem solid rgb(255, 0, 225);
   background-color: #282c34;
-}
-
-#nav {
-  border: 0.5rem solid red;
-  display: flex;
-  justify-content: space-around;
-  padding: 1rem;
-  background-color: #282c34;
-}
-
-.btn.btn-primary {
-  height: 6rem;
-  width: 24rem;
-  font-size: 3rem;
 }
 
 /* FILTER */
