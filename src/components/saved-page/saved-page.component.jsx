@@ -1,5 +1,4 @@
-import WorkoutsList from "../../components/workouts-list.component/workouts-list.component";
-
+import "./saved-page.styles.scss";
 const SavedPage = () => {
   return <div className="saved-page">Saved</div>;
 };

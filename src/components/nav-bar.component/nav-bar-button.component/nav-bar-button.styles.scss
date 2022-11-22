@@ -1,0 +1,17 @@
+.nav-btn {
+  background-image: linear-gradient(to top, black, rgb(0, 217, 255), black);
+
+  height: 8rem;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+#link-text {
+  //   border: 0.2rem solid red;
+  color: black;
+  padding: 0.6rem 23.92rem;
+
+  font-size: 4rem;
+  text-decoration: none;
+}

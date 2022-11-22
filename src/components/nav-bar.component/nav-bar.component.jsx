@@ -1,20 +1,28 @@
-import { Outlet, Link } from "react-router-dom";
 import { Fragment } from "react";
-
+import logo from "/Users/devonfennell/exercise-app-react/src/Images/png images/anvil-fixed.png";
+import { React } from "react";
+import NavBarButton from "./nav-bar-button.component/nav-bar-button.component";
+import { Outlet } from "react-router-dom";
 import "./nav-bar.component.scss";
 
 const NavBar = () => {
   return (
     <Fragment>
+      <header className="App-header">
+        <div className="header-top">The</div>
+        <div className="header-bottom">
+          Dev
+          <img src={logo} className="App-logo" alt="logo" />
+          Forge
+        </div>
+      </header>
       <div className="nav-bar">
-        <Link className="nav-link" id="build-btn" to="/">
-          Build
-        </Link>
-        <Link className="nav-link" id="saved-btn" to="/saved">
-          Saved
-        </Link>
+        <NavBarButton buttonName="build"></NavBarButton>
+        <NavBarButton buttonName="saved"></NavBarButton>
       </div>
-      <Outlet />
+      <div className="app-body">
+        <Outlet />
+      </div>
     </Fragment>
   );
 };

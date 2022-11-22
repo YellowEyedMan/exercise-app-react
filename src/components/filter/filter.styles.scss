@@ -1,0 +1,25 @@
+/* FILTER */
+
+#filter-div {
+  min-height: 4rem;
+  background-color: #282c34;
+  list-style-type: none;
+  // background-image: linear-gradient(
+  //   to top right,
+  //   rgb(245, 24, 4),
+  //   rgba(0, 0, 0, 0.156),
+  //   rgb(255, 98, 0),
+  //   rgba(0, 0, 0, 0.203)
+  // );
+  border: solid 0.5rem rgb(0, 0, 0);
+}
+.workout-selection {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content: center;
+  min-height: 0rem;
+  border: solid 0.5rem rgb(238, 18, 77);
+  background-color: rgba(255, 255, 255, 0.956);
+  //   margin: -0.2rem 2rem 2rem 2rem;
+}
